@@ -34,21 +34,7 @@ def contours(frame):
         box = np.int64(box)
         cv2.drawContours(roi, [box], 0, (0, 255, 0), 2)
 
-def dosya():
-    file1 = open("/Users/caneralp/Downloads/Downloads/{}.txt".format(persondict[emaxindex]), "a")
-    ali = list()
-    for i in file1:
-        ali.append(i[:-1])
-
-    for j in ali:
-        if ali.count(j) > 1:
-            ali.remove(j)
-
-    with open("/Users/caneralp/Downloads/Downloads/{}.txt".format(persondict[emaxindex]), "a") as file :
-        for x in ali:
-            file1.write(x + "\n")
-    file1.close()
-
+         
 
 cap=cv2.VideoCapture(0)
 while True:
